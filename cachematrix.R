@@ -33,7 +33,7 @@ cacheSolve <- function(x, ...) {
   
     inv <- x$getinverse()  # get the inverse from cache and assign it to inv
     
-    # if the inverse is already computed i.e NOT NULL,
+    # if the inverse is already computed i.e inv is NOT NULL,
     #  return the inverse from the cache  
     if(!is.null(inv)) { 
         message("Getting Cached Data.") 
@@ -45,7 +45,7 @@ cacheSolve <- function(x, ...) {
    # So, solve for it,
     data <- x$get()     # assign the matrix to data
     inv <- solve(data)  # Solve for the inverse using solve function
-    x$setinverse(inv)   # Set the inverse in cache
+    x$setinverse(inv)   # Set the inverse in cache, so that it can be used next                         # time around
     inv                 # return the inverse of the matrix
 
 }
