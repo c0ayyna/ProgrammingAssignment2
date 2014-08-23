@@ -1,4 +1,8 @@
-#The purpose of this function is to cache potentially time consuming operation of the inverse of a matix and use it from the cache, rather than compute it every time it is needed.
+#The purpose of this program (cachematrix.R)  is to cache potentially time 
+#consuming operation of the inverse of a matix and use it from the cache, 
+#rather than compute it every time it is needed. It has 2 functions
+# makeCacheMatrix and cacheSolve
+
 #makeCacheMatrix creates a special object. This special object is a list of following four functions :
 # set - to set the value of the matrix, 
 # get - te get the value of the matirx,
